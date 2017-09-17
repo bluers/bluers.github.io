@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "自适应Drupal站点nginx配置"
+title:  "Drupal站点一个数据库，手机端和WEB端跳转配置"
 date:   2017-09-15 07:55:40 +0800
 categories: Drupal8
 ---
