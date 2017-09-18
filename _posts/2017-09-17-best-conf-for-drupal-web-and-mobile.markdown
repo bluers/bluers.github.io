@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Drupal站点一个数据库，手机端和WEB端跳转配置"
+title:  "Drupal站点 单数据库+手机端&WEB端 跳转配置"
 date:   2017-09-15 07:55:40 +0800
 categories: Drupal8
 ---
