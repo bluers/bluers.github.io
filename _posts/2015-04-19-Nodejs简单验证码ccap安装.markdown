@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Nodejs简单验证码ccap安装"
+date:   2017-04-19
+categories: NODEJS
+---
+
 
 首先要求：
 

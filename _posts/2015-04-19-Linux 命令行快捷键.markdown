@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Linux 命令行快捷键"
+date:   2017-04-19
+categories: LINUX
+---
+
 
 涉及在linux命令行下进行快速移动光标、命令编辑、编辑后执行历史命令、Bang(!)命令、控制命令等。让basher更有效率。
 

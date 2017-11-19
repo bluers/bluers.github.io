@@ -1,9 +1,16 @@
-2014-09-16-chrome输入框记住密码导致背景黄色的解决方案.markdown
+---
+layout: post
+title:  "chrome输入框记住密码导致背景黄色的解决方案"
+date:   2017-09-16
+categories: CSS TIPS
+---
 
 在form头部增加以下内容
 
+```
 <input type="text" style="display:hidden;">
 
 <input type="password" style="display:hidden;">
+```
 
 思路是由这两个隐藏的Input来“蒙蔽”chrome记住密码。。。。

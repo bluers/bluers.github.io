@@ -1,4 +1,9 @@
-2014-11-14-IE9透明filter和opacity同时生效的解决办法-IE9-hack-only.markdown
+---
+layout: post
+title:  "IE9透明filter和opacity同时生效的解决办法"
+date:   2017-11-14
+categories: CSS
+---
 
 问题：
 
