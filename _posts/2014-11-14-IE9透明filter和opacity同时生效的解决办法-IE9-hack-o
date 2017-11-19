@@ -1,0 +1,99 @@
+2014-11-14-IE9透明filter和opacity同时生效的解决办法-IE9-hack-only.markdown
+
+问题：
+
+　　假设结构如下：
+
+　　
+
+<div class="wrapper">
+    <p class="cover"></p>
+    <img src="http://gg.blueidea.com/2014/360/360.jpg">
+</div>
+ 
+
+　　若背景需要透明，通常会这么写：
+
+　　
+
+复制代码
+.wrapper{
+    position:relative;
+    width:100px;
+    height:100px;
+}
+ .cover{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    background-color:#000;
+    filter:alpha(opacity=50);
+ }  
+复制代码
+在IE7,8,10以及chrome,firefox下正常。但在IE9下会产生双重透明的情况。见图
+
+
+
+原因：IE9识别filter，也识别rgba，所以导致了双重透明。而目前还没有只在IE9下生效的CSS HACK（如有请指正），<!-- if IE9 -->除外。
+
+解决办法：
+
+    
+
+复制代码
+.wrapper{
+    position:relative;
+    width:100px;
+    height:100px;
+}
+ .cover{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    background-color:#000;
+    filter:alpha(opacity=50);
+ }
+.cover:not(IE9Only){
+    filter:alpha(opacity=100);
+}
+复制代码
+ 
+
+重点在于这个小精灵【:not(selector)】，selector随意
+
+ 
+
+解释：
+
+　　:not（selector）仅仅在IE9+下生效。IE9会自动忽略:not以及之后的内容并生效与当前元素，但IE10会产生实际作用。
+
+因此IE9下，生效的代码为
+
+复制代码
+.cover{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    background-color:#000;
+    filter:alpha(opacity=50);
+ }
+.cover{
+    filter:alpha(opacity=100);
+}
+复制代码
+而IE10生效的代码为
+
+复制代码
+.cover{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    background-color:#000;
+    filter:alpha(opacity=50);
+ }
+复制代码
+从而很好的分辨出了IE9。这也可以作为IE9单独使用的一个css hack。
