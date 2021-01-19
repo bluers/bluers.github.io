@@ -16,7 +16,7 @@
 title: Bluers
 email: bluers.z@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  为了总结和分享曾经的在技术的道理上走过的经历，也为了向大家学习，共同更好的进步.
+  为了总结和分享曾经的在技术的道理上走过的经历，也为了跟大家共同交流，共同更好的进步.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  bluers
